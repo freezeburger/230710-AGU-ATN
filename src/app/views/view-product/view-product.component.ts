@@ -8,6 +8,6 @@ import { ProductService } from './services/product.service';
 })
 export class ViewProductComponent {
 
-  public productService = inject(ProductService)
+  public productService = inject(ProductService);
 
 }

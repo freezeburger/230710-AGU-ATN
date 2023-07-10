@@ -1,4 +1,11 @@
-# 230710AGUATN
+# ALTEN
+
+# Provided Information
+
+* How to setup/build/start project.
+* Any non obvious design decision.
+
+## Angular Informations
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
