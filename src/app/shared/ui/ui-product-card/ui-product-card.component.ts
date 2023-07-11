@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/views/view-product/interfaces/product';
+import { ProductCardFormat } from './types';
 
 @Component({
   selector: 'app-ui-product-card',
@@ -7,6 +8,9 @@ import { Product } from 'src/app/views/view-product/interfaces/product';
   styleUrls: ['./ui-product-card.component.scss']
 })
 export class UiProductCardComponent {
+
+  @Input() public format:ProductCardFormat = 'standard';
+
   @Input() public product:Product | undefined;
   @Output() public select = new EventEmitter<Product>();
 }

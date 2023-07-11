@@ -1,15 +1,33 @@
-<div class="card" *ngIf="product">
 
-  <img [src]=" product.thumbnail " class="card-img-top" alt="illustration">
+<ng-container [ngTemplateOutlet]=" format === 'standard' ? standard : compacted "></ng-container>
 
-  <div class="card-body">
-    <h5 class="card-title">{{ product.title }}</h5>
-    <p class="card-text">{{ product.description }}</p>
-    <p class="card-text">{{ product.price }}</p>
+<ng-template #standard>
+  <div class="card" *ngIf="product">
+    <img [src]=" product.thumbnail " class="card-img-top" alt="illustration">
+
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-text">{{ product.description }}</p>
+      <p class="card-text">{{ product.price }}</p>
+    </div>
+
+    <div class="card-footer">
+      <app-ui-button (click)="select.emit(product)">View Detail</app-ui-button>
+    </div>
+
   </div>
+</ng-template>
 
-  <div class="card-footer">
-    <app-ui-button (click)="select.emit(product)">View Detail</app-ui-button>
+<ng-template #compacted>
+  <div class="card text-bg-dark compacted" *ngIf="product">
+
+    <img [src]=" product.thumbnail " class="card-img" alt="illustration">
+
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-text">{{ product.price }}</p>
+      <app-ui-button (click)="select.emit(product)">View Detail</app-ui-button>
+    </div>
+
   </div>
-
-</div>
+</ng-template>

@@ -5,3 +5,16 @@ img{
 .card{
   min-height: 500px;
 }
+
+
+.card.compacted{
+  box-sizing: content-box;
+  text-align: right;
+  max-height: 200px;
+  min-height: 200px;
+
+  img{
+    max-height: 200px;
+    min-height: 200px;
+  }
+}

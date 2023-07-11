@@ -8,14 +8,20 @@
   Click to load products
 </app-ui-button>
 
-<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
+<div class="alert alert-info" *ngIf="selectedProduct">
+  Your selection :  <strong>{{selectedProduct.title}}</strong>
+</div>
 
+<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
   <div class="col" *ngFor="let item of productService.products">
 
-    <app-ui-product-card [product]="item"></app-ui-product-card>
+    <app-ui-product-card
+      [format]=" 'compacted' "
+      [product]="item"
+      (select)="changeProductSelection( $event )">
+    </app-ui-product-card>
 
   </div>
-
 </div>
 
 
