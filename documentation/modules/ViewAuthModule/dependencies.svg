@@ -22,61 +22,73 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="Times-12" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_ViewAuthModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="69,-70 69,-268 427,-268 427,-70 69,-70"/>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_ViewAuthModule_imports</title>
-<polygon fill="none" stroke="black" points="241,-78 241,-130 419,-130 419,-78 241,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_ViewAuthModule_exports</title>
-<polygon fill="none" stroke="black" points="163,-208 163,-260 323,-260 323,-208 163,-208"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="10.5,-70 10.5,-268 485.5,-268 485.5,-70 10.5,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_ViewAuthModule_declarations</title>
-<polygon fill="none" stroke="black" points="77,-78 77,-130 233,-130 233,-78 77,-78"/>
+<polygon fill="none" stroke="black" points="321.5,-78 321.5,-130 477.5,-130 477.5,-78 321.5,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_ViewAuthModule_exports</title>
+<polygon fill="none" stroke="black" points="176.5,-208 176.5,-260 336.5,-260 336.5,-208 176.5,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_ViewAuthModule_imports</title>
+<polygon fill="none" stroke="black" points="18.5,-78 18.5,-130 313.5,-130 313.5,-78 18.5,-78"/>
 </g>
 <!-- ViewAuthComponent -->
 <g id="node1" class="node">
 <title>ViewAuthComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="224.65,-122 85.35,-122 85.35,-86 224.65,-86 224.65,-122"/>
-<text text-anchor="middle" x="155" y="-99.8" font-family="Times,serif" font-size="14.00">ViewAuthComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="469.15,-122 329.85,-122 329.85,-86 469.15,-86 469.15,-122"/>
+<text text-anchor="middle" x="399.5" y="-99.8" font-family="Times,serif" font-size="14.00">ViewAuthComponent</text>
 </g>
 <!-- ViewAuthModule -->
 <g id="node2" class="node">
 <title>ViewAuthModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="301.87,-187 298.87,-191 277.87,-191 274.87,-187 184.13,-187 184.13,-151 301.87,-151 301.87,-187"/>
-<text text-anchor="middle" x="243" y="-164.8" font-family="Times,serif" font-size="14.00">ViewAuthModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="315.37,-187 312.37,-191 291.37,-191 288.37,-187 197.63,-187 197.63,-151 315.37,-151 315.37,-187"/>
+<text text-anchor="middle" x="256.5" y="-164.8" font-family="Times,serif" font-size="14.00">ViewAuthModule</text>
 </g>
 <!-- ViewAuthComponent&#45;&gt;ViewAuthModule -->
 <g id="edge1" class="edge">
 <title>ViewAuthComponent&#45;&gt;ViewAuthModule</title>
-<path fill="none" stroke="black" d="M204.45,-122.11C204.45,-122.11 204.45,-140.99 204.45,-140.99"/>
-<polygon fill="black" stroke="black" points="200.95,-140.99 204.45,-150.99 207.95,-140.99 200.95,-140.99"/>
+<path fill="none" stroke="black" d="M329.43,-104C318.41,-104 310.57,-104 310.57,-104 310.57,-104 310.57,-140.89 310.57,-140.89"/>
+<polygon fill="black" stroke="black" points="307.07,-140.89 310.57,-150.89 314.07,-140.89 307.07,-140.89"/>
 </g>
 <!-- ViewAuthComponent  -->
-<g id="node4" class="node">
+<g id="node5" class="node">
 <title>ViewAuthComponent </title>
-<polygon fill="#fb8072" stroke="black" points="314.65,-252 171.35,-252 171.35,-216 314.65,-216 314.65,-252"/>
-<text text-anchor="middle" x="243" y="-229.8" font-family="Times,serif" font-size="14.00">ViewAuthComponent </text>
+<polygon fill="#fb8072" stroke="black" points="328.15,-252 184.85,-252 184.85,-216 328.15,-216 328.15,-252"/>
+<text text-anchor="middle" x="256.5" y="-229.8" font-family="Times,serif" font-size="14.00">ViewAuthComponent </text>
 </g>
 <!-- ViewAuthModule&#45;&gt;ViewAuthComponent  -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>ViewAuthModule&#45;&gt;ViewAuthComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M243,-187.11C243,-187.11 243,-205.99 243,-205.99"/>
-<polygon fill="black" stroke="black" points="239.5,-205.99 243,-215.99 246.5,-205.99 239.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M256.5,-187.11C256.5,-187.11 256.5,-205.99 256.5,-205.99"/>
+<polygon fill="black" stroke="black" points="253,-205.99 256.5,-215.99 260,-205.99 253,-205.99"/>
+</g>
+<!-- SharedModule -->
+<g id="node3" class="node">
+<title>SharedModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="305.92,-122 302.92,-126 281.92,-126 278.92,-122 207.08,-122 207.08,-86 305.92,-86 305.92,-122"/>
+<text text-anchor="middle" x="256.5" y="-99.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
+</g>
+<!-- SharedModule&#45;&gt;ViewAuthModule -->
+<g id="edge2" class="edge">
+<title>SharedModule&#45;&gt;ViewAuthModule</title>
+<path fill="none" stroke="black" d="M256.5,-122.11C256.5,-122.11 256.5,-140.99 256.5,-140.99"/>
+<polygon fill="black" stroke="black" points="253,-140.99 256.5,-150.99 260,-140.99 253,-140.99"/>
 </g>
 <!-- ViewAuthRoutingModule -->
-<g id="node3" class="node">
+<g id="node4" class="node">
 <title>ViewAuthRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="411.48,-122 408.48,-126 387.48,-126 384.48,-122 248.52,-122 248.52,-86 411.48,-86 411.48,-122"/>
-<text text-anchor="middle" x="330" y="-99.8" font-family="Times,serif" font-size="14.00">ViewAuthRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="188.98,-122 185.98,-126 164.98,-126 161.98,-122 26.02,-122 26.02,-86 188.98,-86 188.98,-122"/>
+<text text-anchor="middle" x="107.5" y="-99.8" font-family="Times,serif" font-size="14.00">ViewAuthRoutingModule</text>
 </g>
 <!-- ViewAuthRoutingModule&#45;&gt;ViewAuthModule -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>ViewAuthRoutingModule&#45;&gt;ViewAuthModule</title>
-<path fill="none" stroke="black" d="M275.22,-122.11C275.22,-122.11 275.22,-140.99 275.22,-140.99"/>
-<polygon fill="black" stroke="black" points="271.72,-140.99 275.22,-150.99 278.72,-140.99 271.72,-140.99"/>
+<path fill="none" stroke="black" d="M189.23,-104C197.21,-104 202.43,-104 202.43,-104 202.43,-104 202.43,-140.89 202.43,-140.89"/>
+<polygon fill="black" stroke="black" points="198.93,-140.89 202.43,-150.89 205.93,-140.89 198.93,-140.89"/>
 </g>
 </g>
 </svg>
