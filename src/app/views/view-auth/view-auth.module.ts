@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ViewAuthRoutingModule } from './view-auth-routing.module';
 import { ViewAuthComponent } from './view-auth.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { ViewAuthComponent } from './view-auth.component';
     ViewAuthComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     ViewAuthRoutingModule
   ],
   exports: [

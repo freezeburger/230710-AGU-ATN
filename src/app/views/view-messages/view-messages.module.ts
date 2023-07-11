@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ViewMessagesRoutingModule } from './view-messages-routing.module';
 import { ViewMessagesComponent } from './view-messages.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { ViewMessagesComponent } from './view-messages.component';
     ViewMessagesComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     ViewMessagesRoutingModule
   ],
   exports: [
