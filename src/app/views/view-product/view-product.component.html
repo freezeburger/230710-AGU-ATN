@@ -1,11 +1,17 @@
 <h1>Product Data</h1>
 
-<h2>Number of products {{ productService.products.length }} <!-- String Binding --></h2>
+<h2>Number of products {{ productService.products.length }}</h2>
 
 <app-ui-button
   (click)=" productService.load() "
   *ngIf=" productService.products.length === 0 ">
   Click to load products
+</app-ui-button>
+
+<app-ui-button
+  (click)=" cardFormat = (cardFormat === 'standard') ? 'compacted' : 'standard'  "
+  >
+  Swicth Format : <strong>{{ (cardFormat === 'standard') ? 'compacted' : 'standard' }}</strong>
 </app-ui-button>
 
 <div class="alert alert-info" *ngIf="selectedProduct">
@@ -16,7 +22,7 @@
   <div class="col" *ngFor="let item of productService.products">
 
     <app-ui-product-card
-      [format]=" 'compacted' "
+      [format]=" cardFormat  "
       [product]="item"
       (select)="changeProductSelection( $event )">
     </app-ui-product-card>
@@ -24,6 +30,42 @@
   </div>
 </div>
 
+
+
+
+<!--
+<h1>Product Data</h1>
+
+<h2>Number of products {{ productService.products.length }}</h2>
+
+<app-ui-button
+  (click)=" productService.load() "
+  *ngIf=" productService.products.length === 0 ">
+  Click to load products
+</app-ui-button>
+
+<app-ui-button
+  (click)=" cardFormat = (cardFormat === 'standard') ? 'compacted' : 'standard'  "
+  >
+  Swicth Format : <strong>{{ (cardFormat === 'standard') ? 'compacted' : 'standard' }}</strong>
+</app-ui-button>
+
+<div class="alert alert-info" *ngIf="selectedProduct">
+  Your selection :  <strong>{{selectedProduct.title}}</strong>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
+  <div class="col" *ngFor="let item of productService.products">
+
+    <app-ui-product-card
+      [format]=" cardFormat  "
+      [product]="item"
+      (select)="changeProductSelection( $event )">
+    </app-ui-product-card>
+
+  </div>
+</div>
+-->
 
 <!-- Event Binding -->
 <!--

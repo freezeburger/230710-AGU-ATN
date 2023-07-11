@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from './services/product.service';
 import { Product } from './interfaces/product';
+import { ProductCardFormat } from 'src/app/shared/ui/ui-product-card/types';
 
 @Component({
   selector: 'app-view-product',
@@ -10,8 +11,9 @@ import { Product } from './interfaces/product';
 export class ViewProductComponent {
 
   public productService = inject(ProductService);
-
   public selectedProduct:Product | undefined;
+
+  public cardFormat:ProductCardFormat = 'standard';
 
   changeProductSelection( product:Product){
     this.selectedProduct = product;
