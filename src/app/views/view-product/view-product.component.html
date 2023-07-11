@@ -2,6 +2,23 @@
 
 <h2>Number of products {{ productService.products.length }} <!-- String Binding --></h2>
 
+<app-ui-button
+  (click)=" productService.load() "
+  *ngIf=" productService.products.length === 0 ">
+  Click to load products
+</app-ui-button>
+
+<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
+
+  <div class="col" *ngFor="let item of productService.products">
+
+    <app-ui-product-card [product]="item"></app-ui-product-card>
+
+  </div>
+
+</div>
+
+
 <!-- Event Binding -->
 <!--
 <button class="btn btn-primary m-2"
@@ -11,21 +28,10 @@
 </button>
  -->
 
-<app-ui-button
-  (click)=" productService.load() "
-  *ngIf=" productService.products.length === 0 ">
-
-  Click to load products
-
-</app-ui-button>
-
-<div class="row row-cols-4 g-2">
+<!-- <div class="row row-cols-4 g-2">
 
   <div class="col" *ngFor="let item of productService.products">
 
-    <app-ui-product-card [product]="item"></app-ui-product-card>
-
-    <!--
       <div class="card" >
       <img [src]=" item.thumbnail " class="card-img-top" alt="...">
       <div class="card-body">
@@ -33,10 +39,10 @@
         <p class="card-text">{{ item.description }}</p>
         <p class="card-text">{{ item.price }}</p>
       </div>
-    </div> -->
+    </div>
   </div>
 
-</div>
+</div> -->
 
 <!-- Directive NgFor -->
 <!-- <div *ngFor="let item of productService.products"> -->

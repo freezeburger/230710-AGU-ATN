@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/views/view-product/interfaces/product';
 
 @Component({
@@ -8,4 +8,5 @@ import { Product } from 'src/app/views/view-product/interfaces/product';
 })
 export class UiProductCardComponent {
   @Input() public product:Product | undefined;
+  @Output() public select = new EventEmitter<Product>();
 }
