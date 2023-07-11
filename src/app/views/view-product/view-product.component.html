@@ -1,8 +1,22 @@
-
-
 <h1>Product Data</h1>
 
 <h2>Number of products {{ productService.products.length }} <!-- String Binding --></h2>
+
+<!-- Event Binding -->
+<button (click)=" productService.load() "
+        *ngIf=" productService.products.length === 0 ">
+        Click to Load Products
+</button>
+
+<!-- Directive NgFor -->
+<div *ngFor="let item of productService.products">
+  <!-- Attribute Binding -->
+  <img [src]=" item.thumbnail " alt="">
+  <div>
+    <h3>{{ item.title }}</h3>
+    <span>{{ item.price }}</span>
+  </div>
+</div>
 
 <!--
   <code>

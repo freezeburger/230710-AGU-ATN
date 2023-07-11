@@ -4,5 +4,6 @@ import { AppModule } from './app/app.module';
 
 console.log('Application Starting')
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
   .catch(err => console.error(err));
