@@ -5,11 +5,13 @@ import { LayoutSidebarComponent } from './layout-sidebar/layout-sidebar.componen
 import { LayoutMenuDirective } from './directives/layout-menu.directive';
 import { LayoutContentDirective } from './directives/layout-content.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LayoutAutoOpenDirective } from './directives/layout-auto-open.directive';
 @NgModule({
   declarations: [
     LayoutSidebarComponent,
     LayoutMenuDirective,
-    LayoutContentDirective
+    LayoutContentDirective,
+    LayoutAutoOpenDirective
   ],
   imports: [
     NgImportModule,
@@ -19,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   exports: [
     LayoutSidebarComponent,
     LayoutMenuDirective,
-    LayoutContentDirective
+    LayoutContentDirective,
+    LayoutAutoOpenDirective
   ]
 })
 export class LayoutModule { }

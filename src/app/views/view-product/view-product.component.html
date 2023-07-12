@@ -1,8 +1,10 @@
-<app-layout-sidebar>
+<app-layout-sidebar [appLayoutAutoOpen]="2000">
+
   <ng-container [ngTemplateOutlet]="headerInfos" appLayoutContent></ng-container>
   <ng-container [ngTemplateOutlet]="controls" appLayoutMenu></ng-container>
   <ng-container [ngTemplateOutlet]="userFeedback" appLayoutContent></ng-container>
   <ng-container [ngTemplateOutlet]="productList" appLayoutContent></ng-container>
+
 </app-layout-sidebar>
 
 <ng-template #headerInfos>
@@ -11,11 +13,16 @@
 </ng-template>
 
 <ng-template #controls>
-  <app-ui-button (click)=" productService.load() " *ngIf=" productService.products.length === 0 ">
+  <app-ui-button
+    appUiZoom
+    (click)=" productService.load() "
+    *ngIf=" productService.products.length === 0 ">
     Click to load products
   </app-ui-button>
 
-  <app-ui-button (click)=" cardFormat = (cardFormat === 'standard') ? 'compacted' : 'standard'  ">
+  <app-ui-button
+    appUiZoom
+    (click)=" cardFormat = (cardFormat === 'standard') ? 'compacted' : 'standard'  ">
     Swicth Format : <strong>{{ (cardFormat === 'standard') ? 'compacted' : 'standard' }}</strong>
   </app-ui-button>
   <code class="m-3">Shortcut : <strong>alt.c</strong></code>

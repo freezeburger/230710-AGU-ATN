@@ -4,12 +4,14 @@ import { UiButtonComponent } from './ui-button/ui-button.component';
 import { UiAppbarComponent } from './ui-appbar/ui-appbar.component';
 import { UiProductCardComponent } from './ui-product-card/ui-product-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UiZoomDirective } from './directives/ui-zoom.directive';
 
 @NgModule({
   declarations: [
     UiButtonComponent,
     UiAppbarComponent,
-    UiProductCardComponent
+    UiProductCardComponent,
+    UiZoomDirective
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   exports: [
     UiButtonComponent,
     UiAppbarComponent,
-    UiProductCardComponent
+    UiProductCardComponent,
+    UiZoomDirective
   ]
 })
 export class UiModule { }
