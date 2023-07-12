@@ -89,18 +89,38 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/UiModule.html" data-type="entity-link" >UiModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
+                                            'data-bs-target="#components-links-module-UiModule-20f1711c32f951c25da245563a222280a5e641bc0571390f7e27180027032707bc22f7059ac6fb5105b7b0b5702fc7a00f3253c437123b7c2ffd621ef9cabf07"' : 'data-bs-target="#xs-components-links-module-UiModule-20f1711c32f951c25da245563a222280a5e641bc0571390f7e27180027032707bc22f7059ac6fb5105b7b0b5702fc7a00f3253c437123b7c2ffd621ef9cabf07"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-UiModule-20f1711c32f951c25da245563a222280a5e641bc0571390f7e27180027032707bc22f7059ac6fb5105b7b0b5702fc7a00f3253c437123b7c2ffd621ef9cabf07"' :
+                                            'id="xs-components-links-module-UiModule-20f1711c32f951c25da245563a222280a5e641bc0571390f7e27180027032707bc22f7059ac6fb5105b7b0b5702fc7a00f3253c437123b7c2ffd621ef9cabf07"' }>
+                                            <li class="link">
+                                                <a href="components/UiAppbarComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >UiAppbarComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/UiButtonComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >UiButtonComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/UiProductCardComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >UiProductCardComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/ViewAuthModule.html" data-type="entity-link" >ViewAuthModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                            'data-bs-target="#components-links-module-ViewAuthModule-b20c0227acd56b2a3bb206940083b793c75d6ae00b24f78322ca039031879087e55e43221a73627c54bb2d3e1405de1ffd0a0581c0092edd4b15f9a7c564e9f0"' : 'data-bs-target="#xs-components-links-module-ViewAuthModule-b20c0227acd56b2a3bb206940083b793c75d6ae00b24f78322ca039031879087e55e43221a73627c54bb2d3e1405de1ffd0a0581c0092edd4b15f9a7c564e9f0"' }>
+                                            'data-bs-target="#components-links-module-ViewAuthModule-a915b1d268e9550a60596389fe9997d027fa5a5f4ca6f5e55a13120bc04a398c3d1ee4b900e298b6576a04f239d89b11fff5cbb70edf5b9eb2189f1a6404d2f5"' : 'data-bs-target="#xs-components-links-module-ViewAuthModule-a915b1d268e9550a60596389fe9997d027fa5a5f4ca6f5e55a13120bc04a398c3d1ee4b900e298b6576a04f239d89b11fff5cbb70edf5b9eb2189f1a6404d2f5"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ViewAuthModule-b20c0227acd56b2a3bb206940083b793c75d6ae00b24f78322ca039031879087e55e43221a73627c54bb2d3e1405de1ffd0a0581c0092edd4b15f9a7c564e9f0"' :
-                                            'id="xs-components-links-module-ViewAuthModule-b20c0227acd56b2a3bb206940083b793c75d6ae00b24f78322ca039031879087e55e43221a73627c54bb2d3e1405de1ffd0a0581c0092edd4b15f9a7c564e9f0"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ViewAuthModule-a915b1d268e9550a60596389fe9997d027fa5a5f4ca6f5e55a13120bc04a398c3d1ee4b900e298b6576a04f239d89b11fff5cbb70edf5b9eb2189f1a6404d2f5"' :
+                                            'id="xs-components-links-module-ViewAuthModule-a915b1d268e9550a60596389fe9997d027fa5a5f4ca6f5e55a13120bc04a398c3d1ee4b900e298b6576a04f239d89b11fff5cbb70edf5b9eb2189f1a6404d2f5"' }>
                                             <li class="link">
                                                 <a href="components/ViewAuthComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ViewAuthComponent</a>
                                             </li>

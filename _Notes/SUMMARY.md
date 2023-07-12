@@ -3,6 +3,7 @@
 
 # Angular Tooling
 
+* 👍👍👍👍👍
 * NodejS + NPM
 * @angular/cli
 * @compodoc/compodoc
@@ -22,13 +23,42 @@
   * `Pipe`      - Transformation Rules
 * `Service`     - Data Logic
 
+## 19 Decorators (Annotations)
+
+| Decorators provide a mechanism to tie code to Angular functionnalities
+
+**Creation**
+* `@NgModule()`
+* `@Component()`
+* `@Pipe()`
+* `@Directive()`
+* `@Injectable()`
+
+**Communication**
+* `@Input()`
+* `@Output()`
+* ❓`@ViewChild()`
+* ❓`@ViewChildren()`
+* ❓`@ContentChild()`
+* ❓`@ContentChildren()`
+* ❓`@HostBinding()`
+* ❓`@HostListener()`
+* ❓`@Attribute()`
+
+**Injection**
+* `@Inject()`
+* ❓`@Host()`
+* ❓`@Self()`
+* ❓`@SkipSelf()`
+* ❓`@Optional()`
+
 # Angular Routing
 
 | Mean to change a component in the view without reloadind the whole page (Single Page Application)
 
 **Includes**
 
-* `url` surveillance throug the `Router` service
+* `url` surveillance through the `Router` service
 * `Component` as view.
 * `<router-outlet></router-outlet>` as routing destination.
 * `Route` definitions (in a RoutingModule)
@@ -48,6 +78,33 @@ const routes: Routes = [
 
 | Code Unit (as Singleton by default) providing Data Logic to the components.
 
+
+# Angular : Dependency Injection
+
+| Mechanism to allow access (injection) to a *provided*  `Service` (available)
+
+Injection are resovled by the `Injector` core service from Angular.
+
+```ts
+import {inject, Inject} from 
+
+class MyClass{
+
+  /* Angular >=14 inject method  */
+  serviceInstance = inject(ServiceDefinition)
+
+  constructor(
+    /* Decorator */
+    @Inject(ServiceDefinition) serviceInstance:ServiceDefinition,
+     /* Decorator shorthand */
+    serviceInstance:ServiceDefinition
+  ){
+
+  }
+
+}
+
+```
 
 # Angular Components
 
@@ -85,5 +142,10 @@ export class ViewUnitComponent {
 
 <element *ngIf=" expressionAsBoolean ">{{ item }}</element>
 
+<ng-content></ng-content>
+
+<ng-container></ng-container>
+
+<ng-template #templateName></ng-template>
 
 ```
