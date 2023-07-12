@@ -15,11 +15,11 @@ export class LayoutSidebarComponent {
   @ContentChildren(LayoutContentDirective) contents!:QueryList<LayoutContentDirective>;
   @ContentChildren(LayoutMenuDirective) menuItems!:QueryList<LayoutMenuDirective>;
 
+  @ViewChild('menuContent') menuContent!:TemplateRef<any>;
+
   ngAfterViewInit(){
     if(this.contents.length === 0) throw Error('You should have at least one "appLayoutContent"')
   }
-
-  @ViewChild('menuContent') menuContent!:TemplateRef<any>;
 
   @HostListener('window:keyup.control.m')
   openMenu(){
