@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UiButtonComponent } from './ui-button/ui-button.component';
 import { UiAppbarComponent } from './ui-appbar/ui-appbar.component';
 import { UiProductCardComponent } from './ui-product-card/ui-product-card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { UiProductCardComponent } from './ui-product-card/ui-product-card.compon
     UiProductCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   exports: [
     UiButtonComponent,
