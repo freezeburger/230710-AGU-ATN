@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { ProductService } from './services/product.service';
 import { Product } from './interfaces/product';
 import { ProductCardFormat } from 'src/app/shared/ui/ui-product-card/types';
@@ -17,6 +17,11 @@ export class ViewProductComponent {
 
   changeProductSelection( product:Product){
     this.selectedProduct = product;
+  }
+
+  @HostListener('window:keyup.alt.c')
+  toggleDisplayFormat(){
+    this.cardFormat = (this.cardFormat === 'standard') ? 'compacted' : 'standard'
   }
 
 }

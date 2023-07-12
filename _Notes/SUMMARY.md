@@ -37,12 +37,12 @@
 **Communication**
 * `@Input()`
 * `@Output()`
-* ❓`@ViewChild()`
-* ❓`@ViewChildren()`
-* ✔️ ❓`@ContentChild()`
-* ✔️ ❓`@ContentChildren()`
+* `@ViewChild()`
+* `@ViewChildren()`
+* `@ContentChild()`
+* `@ContentChildren()`
 * ❓`@HostBinding()`
-* ❓`@HostListener()`
+* `@HostListener()`
 * ❓`@Attribute()`
 
 **Injection**
