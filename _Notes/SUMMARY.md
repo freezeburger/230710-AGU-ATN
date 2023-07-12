@@ -39,15 +39,15 @@
 * `@Output()`
 * ❓`@ViewChild()`
 * ❓`@ViewChildren()`
-* ❓`@ContentChild()`
-* ❓`@ContentChildren()`
+* ✔️ ❓`@ContentChild()`
+* ✔️ ❓`@ContentChildren()`
 * ❓`@HostBinding()`
 * ❓`@HostListener()`
 * ❓`@Attribute()`
 
 **Injection**
 * `@Inject()`
-* ❓`@Host()`
+* ✔️ ❓`@Host()`
 * ❓`@Self()`
 * ❓`@SkipSelf()`
 * ❓`@Optional()`

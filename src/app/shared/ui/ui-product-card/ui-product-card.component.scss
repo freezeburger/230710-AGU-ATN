@@ -12,9 +12,15 @@ img{
   text-align: right;
   max-height: 200px;
   min-height: 200px;
+  position: relative;
 
   img{
     max-height: 200px;
     min-height: 200px;
+  }
+  app-ui-button{
+    position:absolute;
+    bottom:0;
+    right:0;
   }
 }

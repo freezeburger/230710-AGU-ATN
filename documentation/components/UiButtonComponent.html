@@ -192,8 +192,8 @@ export class UiButtonComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><button class="btn btn-primary m-2">  <ng-content></ng-content></button></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'UiAppbarComponent', 'selector': 'app-ui-appbar'},{'name': 'UiButtonComponent', 'selector': 'app-ui-button'},{'name': 'UiProductCardComponent', 'selector': 'app-ui-product-card'},{'name': 'ViewAuthComponent', 'selector': 'app-view-auth'},{'name': 'ViewMessagesComponent', 'selector': 'app-view-messages'},{'name': 'ViewNotificationComponent', 'selector': 'app-view-notification'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
-    var DIRECTIVES = [];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'LayoutSidebarComponent', 'selector': 'app-layout-sidebar'},{'name': 'UiAppbarComponent', 'selector': 'app-ui-appbar'},{'name': 'UiButtonComponent', 'selector': 'app-ui-button'},{'name': 'UiProductCardComponent', 'selector': 'app-ui-product-card'},{'name': 'ViewAuthComponent', 'selector': 'app-view-auth'},{'name': 'ViewMessagesComponent', 'selector': 'app-view-messages'},{'name': 'ViewNotificationComponent', 'selector': 'app-view-notification'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
+    var DIRECTIVES = [{'name': 'LayoutContentDirective', 'selector': '[appLayoutContent]'},{'name': 'LayoutMenuDirective', 'selector': '[appLayoutMenu]'}];
     var ACTUAL_COMPONENT = {'name': 'UiButtonComponent'};
 </script>
 <script src="../js/tree.js"></script>

@@ -80,6 +80,37 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/LayoutModule.html" data-type="entity-link" >LayoutModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
+                                            'data-bs-target="#components-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' : 'data-bs-target="#xs-components-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' :
+                                            'id="xs-components-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' }>
+                                            <li class="link">
+                                                <a href="components/LayoutSidebarComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >LayoutSidebarComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
+                                        'data-bs-target="#directives-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' : 'data-bs-target="#xs-directives-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' }>
+                                        <span class="icon ion-md-code-working"></span>
+                                        <span>Directives</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' :
+                                        'id="xs-directives-links-module-LayoutModule-1f3819476aea40c5b71a878452aec4cc46d4e1b452f8245590572d4b6c0b807c01f5194398be26194ebc3445eee7f397a4e1db59cd72216a2f56dd7911cbdc51"' }>
+                                        <li class="link">
+                                            <a href="directives/LayoutContentDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >LayoutContentDirective</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="directives/LayoutMenuDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >LayoutMenuDirective</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </li>
                             <li class="link">
                                 <a href="modules/NgImportModule.html" data-type="entity-link" >NgImportModule</a>

@@ -1,8 +1,9 @@
-
-<ng-container [ngTemplateOutlet]="headerInfos"></ng-container>
-<ng-container [ngTemplateOutlet]="controls"></ng-container>
-<ng-container [ngTemplateOutlet]="userFeedback"></ng-container>
-<ng-container [ngTemplateOutlet]="productList"></ng-container>
+<app-layout-sidebar>
+  <ng-container [ngTemplateOutlet]="headerInfos" appLayoutContent></ng-container>
+  <ng-container [ngTemplateOutlet]="controls" appLayoutMenu></ng-container>
+  <ng-container [ngTemplateOutlet]="userFeedback" appLayoutContent></ng-container>
+  <ng-container [ngTemplateOutlet]="productList" appLayoutContent></ng-container>
+</app-layout-sidebar>
 
 <ng-template #headerInfos>
   <h1>Product Data</h1>
