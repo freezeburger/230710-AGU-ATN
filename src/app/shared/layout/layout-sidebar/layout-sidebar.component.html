@@ -1,6 +1,11 @@
-Menu
-<ng-content select="[appLayoutMenu]"></ng-content>
-
-<hr>
+<!--
+  <button (click)="openMenu(menuContent)">Open Sidebar</button>
+ -->
 Content
 <ng-content select="[appLayoutContent]"></ng-content>
+
+<ng-template #menuContent>
+  Menu
+  <hr>
+  <ng-content select="[appLayoutMenu]"></ng-content>
+</ng-template>
