@@ -14,8 +14,13 @@ export class ViewMessagesComponent {
   })
 
   requestMessageCreation() {
-    console.log(this.messageForm.value)
-    console.log(this.messageForm.controls)
+    //if(this.messageForm.invalid) return;
+
+    console.log(this.messageForm);
+    console.log(this.messageForm.value);
+    console.log(this.messageForm.controls);
+
+    //this.messageForm.reset();
   }
 
 }
@@ -23,8 +28,9 @@ export class ViewMessagesComponent {
 const ExcludeWords: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
 
   const excludedWords = ['react', 'vue', 'solidjs'];
+
   if(excludedWords.some( word => control.value.toLowerCase().includes(word))) {
-    return { message: `You are using one of the excluded words ${excludedWords}` }
+    return { excludedWords: `You are using one of the excluded words ${excludedWords}` }
   }
 
   // Everything is good

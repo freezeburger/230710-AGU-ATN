@@ -26,13 +26,16 @@
               formControlName="text"
               name="text" class="m-2"></textarea>
 
+      <div class="alert alert-danger m-2" *ngIf="messageForm.controls.title.errors as errors">
+        {{ errors['excludedWords']}}
+      </div>
+
       <button
-        [disabled]="messageForm.invalid"
         class="btn btn-lg btn-primary m-2"
         (click)="requestMessageCreation()">
         Send
       </button>
-
+      [disabled]="messageForm.invalid"
     </form>
   </div>
 
