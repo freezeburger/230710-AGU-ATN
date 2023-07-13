@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { LongText, ShortText } from 'src/app/core/interfaces/types';
-import { Message } from './interfaces/message';
+import { MessageEntry } from './interfaces/type';
 
 // Mapped Type
 type IForm<DataType> = {
   [Key in keyof DataType]:FormControl<DataType[Key] | null>
 }
 
-type MessageEntry = Pick<Message, 'title'| 'text'>; // TypeScript Helpers : Partial, Pick, Omit
 
 @Component({
   selector: 'app-view-messages',
