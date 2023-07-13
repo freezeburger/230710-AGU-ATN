@@ -7,3 +7,4 @@ export interface Message {
   text:LongText;
   time:TimeStamp;
 }
+

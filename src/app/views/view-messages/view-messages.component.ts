@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { LongText, ShortText } from 'src/app/core/interfaces/types';
+import { Message } from './interfaces/message';
+
+// Mapped Type
+type IForm<DataType> = {
+  [Key in keyof DataType]:FormControl<DataType[Key] | null>
+}
+
+type MessageEntry = Pick<Message, 'title'| 'text'>; // TypeScript Helpers : Partial, Pick, Omit
 
 @Component({
   selector: 'app-view-messages',
@@ -8,10 +17,17 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn,
 })
 export class ViewMessagesComponent {
 
-  messageForm = new FormGroup({
+  messageForm = new FormGroup< IForm<MessageEntry> >({
     title: new FormControl('', [Validators.required, Validators.minLength(5), ExcludeWords]),
     text: new FormControl('', [Validators.required, Validators.minLength(10), ExcludeWords]),
   })
+
+  /*
+  messageForm = new FormGroup({
+    title: new FormControl<Message['title']>('', [Validators.required, Validators.minLength(5), ExcludeWords]),
+    text: new FormControl<LongText>('', [Validators.required, Validators.minLength(10), ExcludeWords]),
+  })
+  */
 
   requestMessageCreation() {
     //if(this.messageForm.invalid) return;
@@ -20,7 +36,7 @@ export class ViewMessagesComponent {
     console.log(this.messageForm.value);
     console.log(this.messageForm.controls);
 
-    //this.messageForm.reset();
+    this.messageForm.reset();
   }
 
 }
@@ -29,7 +45,7 @@ const ExcludeWords: ValidatorFn = (control: AbstractControl): ValidationErrors |
 
   const excludedWords = ['react', 'vue', 'solidjs'];
 
-  if(excludedWords.some( word => control.value.toLowerCase().includes(word))) {
+  if(excludedWords.some( word => control.value?.toLowerCase().includes(word))) {
     return { excludedWords: `You are using one of the excluded words ${excludedWords}` }
   }
 

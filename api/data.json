@@ -1,0 +1,17 @@
+{
+  "messages":[
+    {
+      "id":1,
+      "title":"Angular",
+      "text":"The web development framework for building the future",
+      "time":"1689252442943"
+    },
+    {
+      "id":2,
+      "title":"TypeScript",
+      "text":"TypeScript is JavaScript with syntax for types.",
+      "time":"1689252442943"
+    }
+  ],
+  "notifications":[]
+}
