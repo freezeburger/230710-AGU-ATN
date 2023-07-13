@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
+import { MessagesService } from './views/view-messages/services/messages.service';
+import { distinctUntilChanged, endWith, skip, tap, timeout } from 'rxjs';
+import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '230710-AGU-ATN';
+
+  @ViewChild(NgbAlert) alert!:NgbAlert;
+
+  notification$ = inject(MessagesService).messages$.pipe(
+    skip(2),
+    distinctUntilChanged((prev, curr) => prev.length === curr.length ),
+    tap( () => setTimeout(() => this.alert.close() , 2000 ))
+  );
 }

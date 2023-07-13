@@ -5,5 +5,7 @@
   | <a routerLink="/notifications" class="text-white">Notifications</a>
 </app-ui-appbar>
 
+<ngb-alert type="info" [dismissible]="false" *ngIf="notification$ | async">New message !</ngb-alert>
+
 <!-- Routing Destination -->
 <router-outlet></router-outlet>

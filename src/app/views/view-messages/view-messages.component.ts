@@ -17,8 +17,8 @@ type IForm<DataType> = {
 export class ViewMessagesComponent {
 
   messageForm = new FormGroup< IForm<MessageEntry> >({
-    title: new FormControl('', [Validators.required, Validators.minLength(5), ExcludeWords]),
-    text: new FormControl('', [Validators.required, Validators.minLength(10), ExcludeWords]),
+    title: new FormControl('Message ', [Validators.required, Validators.minLength(5), ExcludeWords]),
+    text: new FormControl('Content of message', [Validators.required, Validators.minLength(10), ExcludeWords]),
   })
 
   /*
@@ -28,7 +28,7 @@ export class ViewMessagesComponent {
   })
   */
 
-  private messageService = inject(MessagesService);
+  messageService = inject(MessagesService);
 
   requestMessageCreation() {
     if(this.messageForm.invalid) return;
@@ -39,6 +39,7 @@ export class ViewMessagesComponent {
     text = text || '';
 
     this.messageService.save( { title, text}  )
+
     /*
     console.log(this.messageForm);
     console.log(this.messageForm.value);

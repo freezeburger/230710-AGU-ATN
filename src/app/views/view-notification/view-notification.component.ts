@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MessagesService } from '../view-messages/services/messages.service';
 
 @Component({
   selector: 'app-view-notification',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-notification.component.scss']
 })
 export class ViewNotificationComponent {
-
+  messageService = inject(MessagesService);
 }

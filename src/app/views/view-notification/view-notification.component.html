@@ -1,3 +1,6 @@
 <app-layout-sidebar>
-  <p appLayoutContent>view-notification works!</p>
+  <code appLayoutContent>
+
+    {{messageService.messages$ | async | json}}
+  </code>
 </app-layout-sidebar>

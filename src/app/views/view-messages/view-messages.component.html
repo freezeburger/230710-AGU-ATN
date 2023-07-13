@@ -17,7 +17,8 @@
 
       <input class="form-control" placeholder="Message Title" formControlName="title" name="title" class="m-2">
 
-      <textarea class="form-control" placeholder="Message Text..." formControlName="text" name="text" class="m-2"></textarea>
+      <textarea class="form-control" placeholder="Message Text..." formControlName="text" name="text"
+        class="m-2"></textarea>
 
       <ng-container *ngIf=" messageForm.controls.title.errors as errors ">
         <div class="alert alert-danger m-2" *ngIf=" errors['excludedWords'] ">
@@ -25,10 +26,10 @@
         </div>
       </ng-container>
 
-      <button class="btn btn-lg btn-primary m-2" (click)="requestMessageCreation()">
+      <button [disabled]="messageForm.invalid" class="btn btn-lg btn-primary m-2" (click)="requestMessageCreation()">
         Send
       </button>
-      [disabled]="messageForm.invalid"
+
     </form>
   </div>
 
@@ -38,11 +39,15 @@
 
 
 
-  <div class="container">
-    <h1>Message List</h1>
-    <ngb-alert type="secondary" class="m-1">Text 1</ngb-alert>
-    <ngb-alert type="secondary" class="m-1">Text 2</ngb-alert>
-    <ngb-alert type="secondary" class="m-1">Text 3</ngb-alert>
+  <div class="container" *ngIf="(messageService.messages$ | async) as messages">
+    <h1>Message List {{messages.length}}</h1>
+
+    <ngb-alert type="secondary" class="m-1" *ngFor="let msg of messages">
+      <strong>{{ msg.title }}</strong>
+      <p>{{ msg.text }}</p>
+      <em>{{ msg.time | date:'short' }}</em>
+    </ngb-alert>
+
   </div>
 
 </ng-template>
