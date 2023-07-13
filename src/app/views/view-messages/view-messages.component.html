@@ -8,14 +8,30 @@
 
 
   <div class="container">
+
     <h1>Message Creation</h1>
-    <form class="d-flex flex-column m-3">
 
-      <input class="form-control" placeholder="Message Title"  name="title" class="m-2">
+    <code>{{ messageForm.value | json }}</code>
 
-      <textarea class="form-control" placeholder="Message Text..."  name="text" class="m-2"></textarea>
+    <form class="d-flex flex-column m-3" [formGroup]="messageForm">
 
-     <button class="btn btn-lg btn-primary m-2">Send</button>
+      <input class="form-control"
+             placeholder="Message Title"
+             formControlName="title"
+             name="title" class="m-2">
+
+      <textarea
+              class="form-control"
+              placeholder="Message Text..."
+              formControlName="text"
+              name="text" class="m-2"></textarea>
+
+      <button
+        [disabled]="messageForm.invalid"
+        class="btn btn-lg btn-primary m-2"
+        (click)="requestMessageCreation()">
+        Send
+      </button>
 
     </form>
   </div>
