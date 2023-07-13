@@ -15,24 +15,18 @@
 
     <form class="d-flex flex-column m-3" [formGroup]="messageForm">
 
-      <input class="form-control"
-             placeholder="Message Title"
-             formControlName="title"
-             name="title" class="m-2">
+      <input class="form-control" placeholder="Message Title" formControlName="title" name="title" class="m-2">
 
-      <textarea
-              class="form-control"
-              placeholder="Message Text..."
-              formControlName="text"
-              name="text" class="m-2"></textarea>
+      <textarea class="form-control" placeholder="Message Text..." formControlName="text" name="text"
+        class="m-2"></textarea>
 
-      <div class="alert alert-danger m-2" *ngIf="messageForm.controls.title.errors as errors">
-        {{ errors['excludedWords']}}
-      </div>
+      <ng-container *ngIf=" messageForm.controls.title.errors as errors ">
+        <div class="alert alert-danger m-2" *ngIf=" errors['excludedWords'] ">
+          {{ errors['excludedWords'] }}
+        </div>
+      </ng-container>
 
-      <button
-        class="btn btn-lg btn-primary m-2"
-        (click)="requestMessageCreation()">
+      <button class="btn btn-lg btn-primary m-2" (click)="requestMessageCreation()">
         Send
       </button>
       [disabled]="messageForm.invalid"
