@@ -1,6 +1,6 @@
 import { Component, HostListener, ViewChild, inject } from '@angular/core';
 import { ProductService } from './services/product.service';
-import { Product } from './interfaces/product';
+import { Product } from '../../core/interfaces/product';
 import { ProductCardFormat } from 'src/app/shared/ui/ui-product-card/types';
 import { UiZoomDirective } from 'src/app/shared/ui/directives/ui-zoom.directive';
 
@@ -16,8 +16,9 @@ export class ViewProductComponent {
 
   public cardFormat:ProductCardFormat = 'standard';
 
-  @ViewChild(UiZoomDirective) loadButton!:UiZoomDirective;
+  public searchTerm = '';
 
+  @ViewChild(UiZoomDirective) loadButton!:UiZoomDirective;
   ngAfterViewInit(){
     setTimeout( () => this.loadButton.zoomIn(), 500)
     setTimeout( () => this.loadButton.zoomOut(), 1300)

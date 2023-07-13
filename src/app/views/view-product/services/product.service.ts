@@ -1,5 +1,5 @@
 import { Inject, Injectable, Injector, inject } from '@angular/core';
-import { Product } from '../interfaces/product';
+import { Product } from '../../../core/interfaces/product';
 import { ProductResponse } from '../interfaces/product-response';
 import { HttpClient } from '@angular/common/http';
 
@@ -23,6 +23,7 @@ export class ProductService {
     // @Inject(HttpClient) private http:HttpClient
     // private http:HttpClient
   ) {
+    this.load();
     console.log(this.http);
   }
 

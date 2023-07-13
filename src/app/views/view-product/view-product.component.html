@@ -10,6 +10,26 @@
 <ng-template #headerInfos>
   <h1>Product Data</h1>
   <h2>Number of products {{ productService.products.length }}</h2>
+  <hr>
+<!--   <code>{{searchTerm}}</code> -->
+
+  <input class="form-control"
+         [(ngModel)]="searchTerm"
+         #searchField="ngModel"
+         placeholder="Filter Products..."
+         minlength="3"
+         [disabled]=" productService.products.length === 0 ">
+
+  <!-- <code>{{ searchField.errors | json }}</code> -->
+  <div class="alert alert-warning"
+      *ngIf=" searchField.invalid &&  searchField.dirty && searchField.errors && searchField.errors['minlength'] as errors">
+    Please type in at least 3 characters.
+    <strong>
+      {{ errors.actualLength}}/{{errors.requiredLength}}
+    </strong>
+  </div>
+
+  <hr>
 </ng-template>
 
 <ng-template #controls>
@@ -36,10 +56,9 @@
 
 <ng-template #productList>
   <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-2">
-    <div class="col" *ngFor="let item of productService.products">
+    <div class="col" *ngFor="let item of ( productService.products | ellipis | byTitle:searchTerm )">
 
-      <app-ui-product-card [format]=" cardFormat  " [product]="item" (select)="changeProductSelection( $event )">
-      </app-ui-product-card>
+      <app-ui-product-card [format]=" cardFormat  " [product]="item" (select)="changeProductSelection( $event )"></app-ui-product-card>
 
     </div>
   </div>

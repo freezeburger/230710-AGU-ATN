@@ -5,3 +5,10 @@
 }
 
 
+.ng-invalid.ng-touched{
+  border:2px solid crimson;
+}
+
+.ng-valid.ng-dirty:focus{
+  border:2px solid green;
+}

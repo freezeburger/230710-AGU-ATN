@@ -1,9 +1,10 @@
 /**
  * Type Aliases
  */
-
-
 export type UniqueId = number;
+
+
+export type TimeStamp = number;
 
 /**
  * Aboslute URL pointing to an image ressource.
