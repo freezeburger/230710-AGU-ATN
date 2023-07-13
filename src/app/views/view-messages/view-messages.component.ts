@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MessageEntry } from './interfaces/type';
+import { MessagesService } from './services/messages.service';
 
 // Mapped Type
 type IForm<DataType> = {
@@ -27,12 +28,22 @@ export class ViewMessagesComponent {
   })
   */
 
-  requestMessageCreation() {
-    //if(this.messageForm.invalid) return;
+  private messageService = inject(MessagesService);
 
+  requestMessageCreation() {
+    if(this.messageForm.invalid) return;
+
+    // TODO Better Value Check
+    let { title, text} = this.messageForm.value;
+    title = title || '';
+    text = text || '';
+
+    this.messageService.save( { title, text}  )
+    /*
     console.log(this.messageForm);
     console.log(this.messageForm.value);
     console.log(this.messageForm.controls);
+    */
 
     this.messageForm.reset();
   }
